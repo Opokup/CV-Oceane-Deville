@@ -1,40 +1,148 @@
+/* Police d'écriture */
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap');
 
-/*Police d'écriture*/
-.lato-regular {
-  font-family: "Lato", sans-serif;
-  font-weight: 400;
-  font-style: normal;
+@font-face {
+  font-family: "Raleway";
+  src: url('../fonts/Raleway-VariableFont_wght.woff') format('woff'),
+       url('../fonts/Raleway-VariableFont_wght.ttf') format('truetype');
 }
 
-.lato-bold {
-  font-family: "Lato", sans-serif;
-  font-weight: 700;
-  font-style: normal;
-}
-
-.lato-regular-italic {
-  font-family: "Lato", sans-serif;
-  font-weight: 400;
+@font-face {
+  font-family: "Raleway";
   font-style: italic;
+  src: url('../fonts/Raleway-Italic.woff') format('woff'),
+       url('../fonts/Raleway-Italic.ttf') format('truetype');
 }
 
+@font-face {
+  font-family: "Raleway";
+  font-weight: bold;
+  src: url('../fonts/Raleway-Bold.woff') format('woff'),
+       url('../fonts/Raleway-Bold.ttf') format('truetype');
+}
 
-@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
-
-/* couleur */
-
+/* Couleurs */
 :root {
-  --fonce: #333333; /* rgb(51,51,51) */
-  --bleue: #17abb3; /* rgb(23,171,179) */
-  --gris-clair: #e3e3e3; /* rgb(227,227,227) */
-  --blanc-fume: #f5f5f5; /* rgb(245,245,245) */
-  --blanc: #ffffff; /* rgb(255,255,255) */ 
+  --fonce: #333333;
+  --bleue: #17abb3;
+  --gris-clair: #e3e3e3;
+  --blanc-fume: #f5f5f5;
+  --blanc: #ffffff;
 }
 
-h1, h2{
-  font-family: "Lato", sans-serif;
+/* Base */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
-body{
-  font-family: "Raleway", sans-serif;
+body {
+  font-family: 'Raleway', sans-serif;
+  background-color: var(--blanc-fume);
+  color: var(--fonce);
+  line-height: 1.6;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+h1, h2 {
+  color: var(--bleue);
+  font-family: 'Lato', sans-serif;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Photo de profil */
+.header-top img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid var(--bleue);
+  cursor: zoom-in;
+  transition: transform 0.3s;
+}
+
+.header-top img:hover {
+  transform: scale(1.05);
+}
+
+/* Profil texte */
+#profil p {
+  text-align: justify;
+  text-indent: 2em;
+}
+
+#compétences li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 6px 0;
+  font-size: 1rem;
+}
+
+#compétences .tech {
+  flex: 1;
+  text-align: left;
+}
+
+#compétences .stars {
+  display: flex;
+  gap: 4px;
+}
+
+.filled {
+  color: var(--bleue);
+  font-size: 1.1rem;
+}
+
+.empty {
+  color: var(--bleue);
+  font-size: 1.1rem;
+}
+
+#langues li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 6px 0;
+  font-size: 1rem;
+}
+
+/* Expérience, formations, stages */
+.exp {
+  position: relative;
+  padding: 10px 10px 10px 20px;
+  margin-bottom: 10px;
+  background-color: var(--blanc);
+  transition: background-color 0.3s;
+}
+
+.exp:hover {
+  background-color: var(--gris-clair);
+}
+
+.exp:hover::before {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 5px;
+  height: 100%;
+  background-color: var(--bleue);
+}
+
+/* Icônes de réseaux sociaux */
+.social_media img {
+  width: 30px;
+  height: 30px;
+  transition: opacity 0.3s;
+}
+
+.social_media img:hover {
+  opacity: 0.6;
 }

@@ -1,0 +1,113 @@
+/* Structure principale */
+
+html, body {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  max-width: 1160px;
+  margin: 0 auto;
+  background-color: var(--blanc-fume);
+}
+
+
+/* Header*/
+
+.header-top {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  background-color: var(--bleue);
+  color: var(--blanc);
+  padding: 30px 20px;
+}
+
+.header-top img {
+  flex-shrink: 0;
+}
+
+.title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  text-align: center;
+}
+
+.title h1 {
+  margin: 0;
+  font-size: 2rem;
+  font-family: 'Lato', sans-serif;
+  color: var(--blanc);
+}
+
+.title strong {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+/* Contact dans le header */
+.contact {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  gap: 10px 40px; 
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  padding: 0;
+  list-style: none;
+}
+
+.contact li {
+  font-size: 0.95rem;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  white-space: nowrap;
+}
+
+
+.contact a {
+  color: var(--blanc);
+  text-decoration: none;
+}
+
+/* Main */
+
+main {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+  background-color: var(--blanc);
+}
+
+/* Aside */
+aside {
+  width: 30%;
+  padding: 20px;
+  background-color: var(--blanc-fume);
+}
+
+/* Section*/
+section {
+  width: 70%;
+  padding: 20px;
+}
+
+/* Footer */
+
+footer {
+  background-color: var(--bleue);
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+.social_media {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 10px;
+}
